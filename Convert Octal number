@@ -1,0 +1,17 @@
+// Write a C++ program to print octal of a given devimal number.
+#include<iostream>
+using namespace std;
+int main()
+{
+    long long int n, rem, octal=0, i=1;
+    cout << "Enter a number: ";
+    cin >> n;
+    while(n>0)
+    {
+        rem = n % 8;
+        n /= 8;
+        octal += (rem * i);
+        i = i * 10;
+    }
+    cout << "Octal number = " << octal << endl;
+}
